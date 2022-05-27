@@ -9,7 +9,8 @@ public class Account {
     }
 
     public boolean checkNameToEmboss() {
-        return  Pattern.compile("^\\S+ \\S+$")
+        return  name != null &&
+                Pattern.compile("^\\S+ \\S+$")
                 .matcher(name)
                 .matches()
                 && name.length()>=3 && name.length()<=19;

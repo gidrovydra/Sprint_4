@@ -19,6 +19,7 @@ public class CheckAccountParametrizedTest {
     public static Object[][] checkName() {
         return new Object[][] {
                 {"Тимати Шаламе", true},
+                {null, false},
                 {"",false}, //пустое имя
                 {"АБ", false}, // 2 символа + (при этом без пробела)
                 {"А Б", true}, // 3 символа
@@ -34,6 +35,7 @@ public class CheckAccountParametrizedTest {
                 {"777 888", true}, //цифры
                 {"Timotie Shalame", true}, //латиница
                 {"!@#%^%# (*&)(_)!", true} //символы
+                
         };
     }
 
